@@ -53,21 +53,31 @@ public class KennedySteveLab00 implements Lab00 {
     }
 
     @Override
-    public long problem2() {
-        ArrayList thing = new ArrayList<>();
-        LinkedList thing2 = new LinkedList<>();
-        long start = System.currentTimeMillis();
+    public long problem2(int size) {
 
+        //initializes ArrayList and LinkedList
+        List<Integer> thing = new ArrayList<>();
+        LinkedList<Integer> thing2 = new LinkedList<>();
+
+        //Times incrementation of an ArrayLists from 0 to 'size'
+        long start = System.currentTimeMillis();
         for (int i=0; i<size; i++) {
-            thing.append(i);
+            thing.add(i);
         }
         long end = System.currentTimeMillis();
+        long ArrayListTime = end - start;
 
+        //Times incrementation of a LinkedList from 0 to 'size'
+        start = System.currentTimeMillis();
         for (int i=0; i<size; i++) {
-            thing2.append(i);
+            thing2.add(i);
         }
+        end = System.currentTimeMillis();
+        long LinkedListTime = end - start;
 
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //Output times and compare them
+        System.out.println("ArrayList time: " + ArrayListTime + "\nLinkedList time: " + LinkedListTime);
+        
     }
     
 }
