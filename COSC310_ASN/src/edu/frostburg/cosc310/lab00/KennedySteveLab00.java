@@ -6,6 +6,9 @@
  */
 package edu.frostburg.cosc310.lab00;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 /**
  * Your documentation should begin here.
  * @author SteveK
@@ -51,6 +54,19 @@ public class KennedySteveLab00 implements Lab00 {
 
     @Override
     public long problem2() {
+        ArrayList thing = new ArrayList<>();
+        LinkedList thing2 = new LinkedList<>();
+        long start = System.currentTimeMillis();
+
+        for (int i=0; i<size; i++) {
+            thing.append(i);
+        }
+        long end = System.currentTimeMillis();
+
+        for (int i=0; i<size; i++) {
+            thing2.append(i);
+        }
+
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
