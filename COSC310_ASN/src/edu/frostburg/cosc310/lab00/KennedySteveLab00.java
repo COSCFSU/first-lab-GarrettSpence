@@ -8,6 +8,7 @@ package edu.frostburg.cosc310.lab00;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Your documentation should begin here.
@@ -56,13 +57,13 @@ public class KennedySteveLab00 implements Lab00 {
     public long problem2(int size) {
 
         //initializes ArrayList and LinkedList
-        List<Integer> thing = new ArrayList<>();
-        LinkedList<Integer> thing2 = new LinkedList<>();
+        List<String> thing = new ArrayList<>();
+        LinkedList<String> thing2 = new LinkedList<>();
 
         //Times incrementation of an ArrayLists from 0 to 'size'
         long start = System.currentTimeMillis();
         for (int i=0; i<size; i++) {
-            thing.add(i);
+            thing.add(Integer.toString(i));
         }
         long end = System.currentTimeMillis();
         long ArrayListTime = end - start;
@@ -70,14 +71,14 @@ public class KennedySteveLab00 implements Lab00 {
         //Times incrementation of a LinkedList from 0 to 'size'
         start = System.currentTimeMillis();
         for (int i=0; i<size; i++) {
-            thing2.add(i);
+            thing2.add(Integer.toString(i));
         }
         end = System.currentTimeMillis();
         long LinkedListTime = end - start;
 
         //Output times and compare them
         System.out.println("ArrayList time: " + ArrayListTime + "\nLinkedList time: " + LinkedListTime);
-        
+        return end-start;
     }
     
 }
